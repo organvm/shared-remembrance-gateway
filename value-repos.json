@@ -8,6 +8,9 @@
       "promoted": "2026-06-22",
       "thesis": "Portable, platform-independent digital-memorial archive format — a lossless, exportable bundle of a person's photos/audio/text/objects/arrangement. The defensible atom of the DESIGN_ONLY metaverse spec: reusable across the estate, aligned with the B2B white-label memorial revenue path, and buildable now in the existing TS stack.",
       "first_task": "Implement the MemorialArchive format in src/ — typed schema + serialize/deserialize/validate with a lossless round-trip test.",
+      "first_task_status": "done",
+      "first_task_delivered": "src/memorial-archive.ts + tests/memorial-archive.test.ts (20 tests, lossless round-trip proven, build green)",
+      "next_task": "Add a content-addressable manifest + CID hashing over the canonical serialization, and an archive-import CLI so the format is consumable as an npm package by sibling repos (audio-synthesis-bridge, showcase-portfolio).",
       "source": "DISCOVERY.md"
     }
   ]
