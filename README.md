@@ -231,6 +231,25 @@ Creating a memorial space follows a guided workflow:
 
 ## 6. Working Examples
 
+> **Reference implementation (shipping today).** While the Unity client remains a
+> design specification, the concept's most defensible atom — the **portable
+> Memorial Archive format** — is implemented and tested in this repository
+> (`src/memorial-archive.ts`). It is a dependency-free TypeScript library that
+> turns the README's guarantee *"every memorial can be exported as a
+> self-contained archive independent of the platform"* into executing code with a
+> proven lossless round-trip. See [`DISCOVERY.md`](DISCOVERY.md) for the value thesis.
+>
+> ```ts
+> import { createMemorial, serialize, deserialize } from "shared-remembrance-gateway";
+>
+> const memorial = createMemorial({ name: "In Memory of David Chen", relationship: "parent" });
+> memorial.items.push({ id: "photo-grad", kind: "photo", ref: "dad-graduation.jpg", caption: "Graduation, 1980" });
+>
+> const exported = serialize(memorial);       // canonical, content-addressable JSON
+> const reimported = deserialize(exported);   // validates on the way in; throws on loss/corruption
+> // reimported deep-equals memorial — lossless, platform-independent.
+> ```
+
 ### Home Customization
 
 ```csharp

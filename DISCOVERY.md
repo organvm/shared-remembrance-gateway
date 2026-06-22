@@ -2,6 +2,9 @@
 
 **Date:** 2026-06-22 · **Verdict:** VALUE FOUND → promoted to ranked tier
 **Organ:** ORGAN-II (Art) · `organvm-ii-poiesis/shared-remembrance-gateway`
+**Build-out:** First task DELIVERED — the Memorial Archive format ships in
+`src/memorial-archive.ts` with a proven lossless round-trip
+(`tests/memorial-archive.test.ts`, 20 tests, build green). The repo is no longer dark.
 
 ## Value Thesis
 

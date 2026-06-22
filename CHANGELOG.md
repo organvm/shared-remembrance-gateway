@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Memorial Archive format** (`src/memorial-archive.ts`) — the portable,
+  platform-independent archive at the heart of the discovered value thesis
+  (see `DISCOVERY.md`). Typed `MemorialArchive` schema plus `serialize`,
+  `deserialize`, `validate`, `createMemorial`, and `isMemorialArchive`, with a
+  canonical (content-addressable) serializer and a guaranteed **lossless
+  export/import round-trip** — the README's stated quality gate, now enforced by
+  tests. Re-exported from `src/index.ts` for cross-estate consumption.
 - CONVERGENCE Sprint: Full PRODUCTION promotion — CI/CD, prototype skeleton, ADRs, badge row
 - Provenance materials deployed from local source archive
 
